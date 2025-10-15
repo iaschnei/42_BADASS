@@ -22,6 +22,9 @@ COPY confs/bgpd.conf /etc/frr/bgpd.conf
 COPY confs/ospfd.conf /etc/frr/ospfd.conf
 COPY confs/isisd.conf /etc/frr/isisd.conf
 
+# vtysh (the interactive console) needs a config file, even empty
+RUN touch /etc/frr/vtysh.conf
+
 RUN chown frr:frr /etc/frr/*.conf
 
 COPY entrypoint.sh /entrypoint.sh
