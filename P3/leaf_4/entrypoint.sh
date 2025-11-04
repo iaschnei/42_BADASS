@@ -22,7 +22,7 @@ ip link set dev vxlan10 up
 
 # Link the bridge to the router's eth0 interface and to vxlan10
 brctl addif br0 vxlan10
-brctl addif br0 eth1
+brctl addif br0 eth2
 
 # Note : Ip addresses are now setup by the config we copy in vtysh config mode
 
