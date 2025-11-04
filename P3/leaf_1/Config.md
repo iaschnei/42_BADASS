@@ -5,15 +5,19 @@ no ipv6 forwarding
 !
 interface eth0
  ip address 10.1.1.1/30
+ ip ospf area 0
 !
 interface eth1
  ip address 10.1.1.5/30
+ ip ospf area 0
 !
 interface eth2
  ip address 10.1.1.9/30
+ ip ospf area 0
 !
 interface lo
  ip address 1.1.1.1/32
+ ip ospf area 0
 !
 router bgp 1
  neighbor ibgp peer-group
@@ -27,7 +31,4 @@ router bgp 1
  exit-address-family
 !
 router ospf
- network 0.0.0.0/0 area 0
-!
-line vty
 !
