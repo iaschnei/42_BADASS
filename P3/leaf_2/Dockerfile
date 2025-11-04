@@ -6,9 +6,6 @@ RUN touch /etc/frr/vtysh.conf /etc/frr/zebra.conf /etc/frr/bgpd.conf /etc/frr/os
 COPY confs/daemons.conf /etc/frr/daemons
 RUN chown frr:frr /etc/frr/daemons
 
-COPY confs/frr.conf /etc/frr/frr.conf
-RUN chown frr:frr /etc/frr/frr.conf
-
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
