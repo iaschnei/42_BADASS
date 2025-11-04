@@ -1,4 +1,4 @@
-hostname _iaschnei-1
+hostname leaf-iaschnei-1
 no ipv6 forwarding
 !
 ! Setup the interfaces to connect with the other leaves

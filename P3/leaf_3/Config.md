@@ -1,4 +1,4 @@
-hostname _iaschnei-3
+hostname leaf-iaschnei-3
 no ipv6 forwarding
 !
 interface eth1
