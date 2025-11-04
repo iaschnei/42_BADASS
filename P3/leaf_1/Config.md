@@ -1,5 +1,3 @@
-frr version 8.4
-frr defaults traditional
 hostname _iaschnei-1
 no ipv6 forwarding
 !
@@ -13,7 +11,6 @@ interface eth1
 !
 interface eth2
  ip address 10.1.1.9/30
-!
 !
 interface lo
  ip address 1.1.1.1/32

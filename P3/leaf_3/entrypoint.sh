@@ -1,11 +1,15 @@
 #!/bin/sh
 
-# Start the daemons
-/usr/lib/frr/frrinit.sh start
-
+# Start the daemons in the background
+/usr/lib/frr/zebra -d -F traditional -A 127.0.0.1 -s 90000
+/usr/lib/frr/bgpd -d -F traditional -A 127.0.0.1
+/usr/lib/frr/ospfd -d -F traditional -A 127.0.0.1
+/usr/lib/frr/isisd -d -F traditional -A 127.0.0.1
 
 # Wait a bit for all daemons to start
 sleep 2
+
+#TODO : maybe add back the bridge and vxlan stuff like in leaf 2 and 4
 
 # Start a shell
 exec sh

@@ -1,7 +1,10 @@
 #!/bin/sh
 
-# Start all daemons using the main script instead of doing it manually like before (because using frr.conf requires to do it like that)
-/usr/lib/frr/frrinit.sh start
+# Start the daemons in the background
+/usr/lib/frr/zebra -d -F traditional -A 127.0.0.1 -s 90000
+/usr/lib/frr/bgpd -d -F traditional -A 127.0.0.1
+/usr/lib/frr/ospfd -d -F traditional -A 127.0.0.1
+/usr/lib/frr/isisd -d -F traditional -A 127.0.0.1
 
 # Wait a bit for all daemons to start
 sleep 2
