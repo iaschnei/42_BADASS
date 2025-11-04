@@ -18,3 +18,5 @@ router bgp 1
   advertise-all-vni
  exit-address-family
 !
+router ospf
+!
