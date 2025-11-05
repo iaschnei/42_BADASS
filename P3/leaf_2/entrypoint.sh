@@ -17,7 +17,8 @@ ip link set dev br0 up
 
 # Create the vxlan, we don't need to set a group or a target to the vxlan since we use a different method in p3
 # The destination port is set to 4789 as recommended in RFC
-ip link add name vxlan10 type vxlan id 10 dstport 4789
+ip link add name vxlan10 type vxlan id 10 dstport 4789 local 1.1.1.2
+
 ip link set dev vxlan10 up
 
 # Link the bridge to the router's eth0 interface and to vxlan10

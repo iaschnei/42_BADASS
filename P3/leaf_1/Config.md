@@ -28,6 +28,7 @@ router bgp 1
  address-family l2vpn evpn
   neighbor ibgp activate
   neighbor ibgp route-reflector-client
+  advertise-all-vni
  exit-address-family
 !
 router ospf
