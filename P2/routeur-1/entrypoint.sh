@@ -2,6 +2,7 @@
 
 # Start the daemons in the background
 /usr/lib/frr/zebra -d -F traditional -A 127.0.0.1 -s 90000
+sleep 2
 /usr/lib/frr/bgpd -d -F traditional -A 127.0.0.1
 /usr/lib/frr/ospfd -d -F traditional -A 127.0.0.1
 /usr/lib/frr/isisd -d -F traditional -A 127.0.0.1
@@ -38,5 +39,5 @@ brctl addif br0 vxlan10
 # eth0 is linked to vxlan10 and any packet exiting will be part of this VXLAN
 # That way, communication can enter any router in the VXLAN and exit through any other to reach the desired host
 
-# Start a shell
+# Start a shell (for easy console access)
 exec sh

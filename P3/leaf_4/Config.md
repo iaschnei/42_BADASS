@@ -1,3 +1,4 @@
+! Connected to leaf 1 (eth2) and host 3 (eth0)
 hostname leaf-iaschnei-4
 no ipv6 forwarding
 !
